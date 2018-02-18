@@ -4,7 +4,7 @@
 termux-setup-storage
 
 # Setup SSH:
-pkg install openssh 
+apt install openssh 
 ssh-keygen
 cp * /storage/downloads/
 
@@ -18,7 +18,7 @@ sshd
 
 #Install General Apps:
 
-pkg install nano
+apt install nano
 
 # Install Data & Analytics packages (including jupyter)
 
