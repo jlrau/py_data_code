@@ -3,6 +3,23 @@
 
 termux-setup-storage
 
+# Setup SSH:
+pkg install openssh 
+ssh-keygen
+cp * /storage/downloads/
+
+#usdful commands:
+#whoami - username
+#ifconfig - IP address
+#u0_a54@100.115.92.2
+#pkill sshd
+
+sshd
+
+#Install General Apps:
+
+pkg install nano
+
 # Install Data & Analytics packages (including jupyter)
 
 pkg update
