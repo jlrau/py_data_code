@@ -1,27 +1,27 @@
 
 #Expose ChromeOS storage:
-
 termux-setup-storage
 
 # Setup SSH:
 apt install openssh 
 ssh-keygen
 cp * /storage/downloads/
-
-#usdful commands:
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 #whoami - username
 #ifconfig - IP address
-#u0_a54@100.115.92.2
+#<username>@<ip address>
+#Port Forward Jupyter:
+# -L 8888:localhost:8888
 #pkill sshd
-
+#SSH Configs:
+/data/data/com.termux/files/usr/etc/ssh
+#Start SSH Host Service:
 sshd
 
 #Install General Apps:
-
 apt install nano
 
 # Install Data & Analytics packages (including jupyter)
-
 pkg update
 apt-get update
 apt install python python-dev clang fftw
@@ -36,8 +36,8 @@ LDFLAGS=" -lm -lcompiler_rt" pip install pandas
 
 # BACKUP TERMUX
 cd /data/data/com.termux/files
-tar -cvzf ~/storage/downloads/termux/termux_20180217.tgz home usr
+tar -cvzf ~/storage/downloads/termux/termux_current.tgz home usr
 
 # RESTORE TERMUX
 cd /data/data/com.termux/files
-tar -xvzf ~/storage/downloads/termux/termux_20180217.tgz
+tar -xvzf ~/storage/downloads/termux/termux_current.tgz
