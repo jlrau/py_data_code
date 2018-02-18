@@ -40,4 +40,4 @@ tar -cvzf ~/storage/downloads/termux/termux_20180217.tgz home usr
 
 # RESTORE TERMUX
 cd /data/data/com.termux/files
-tar -xvzf ~storage/downloads/termux/termux_20180217.tgz
+tar -xvzf ~/storage/downloads/termux/termux_20180217.tgz
