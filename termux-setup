@@ -1,0 +1,27 @@
+termux-setup-storage
+pkg update
+apt-get update
+apt-get install git openssh nano python python-dev clang fftw
+LDFLAGS=" -lm -lcompiler_rt" pip install numpy
+pip install --upgrade pip
+apt-get install freetype freetype-dev libpng libpng-dev pkg-config
+LDFLAGS=" -lm -lcompiler_rt" pip install matplotlib
+apt-get install libzmq libzmq-dev
+LDFLAGS=" -lm -lcompiler_rt" pip install jupyter
+LDFLAGS=" -lm -lcompiler_rt" pip install pandas
+apt-get install tmux vim
+
+mkdir ~/.vim
+cd ~/.vim
+git clone https://github.com/tpope/vim-pathogen.git bundle/pathogen.vim
+git clone https://github.com/kien/ctrlp.vim.git bundle/ctrlp.vim
+git clone https://github.com/itchyny/lightline.vim bundle/lightline.vim
+git clone https://github.com/scrooloose/nerdtree bundle/nerdtree.vim
+git clone https://github.com/jistr/vim-nerdtree-tabs bundle/nerdtree-tabs.vim
+git clone https://github.com/vim-scripts/wombat256.vim bundle/wombat256.vim
+git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
+cd ~/
+git clone https://github.com/jlrau/vim_stuff/
+mv ~/vim_stuff/.vimrc ~/
+mv ~/vim_stuff/.tmux.conf ~/
+rm -rf ~/vim_stuff
